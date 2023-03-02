@@ -19,9 +19,13 @@
 		635327C929A95B8200A804EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635327C829A95B8200A804EE /* Assets.xcassets */; };
 		635327CC29A95B8200A804EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635327CA29A95B8200A804EE /* LaunchScreen.storyboard */; };
 		635327D929A95EEE00A804EE /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635327D829A95EEE00A804EE /* LoginScreen.swift */; };
+		6379EDCE29AFDF1E00EA7347 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6379EDCD29AFDF1E00EA7347 /* GoogleService-Info.plist */; };
+		B4BA468C50AADC2F0C9F993F /* Pods_SmartChet_Struct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3599ACDFF6858319C8828A1E /* Pods_SmartChet_Struct.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3599ACDFF6858319C8828A1E /* Pods_SmartChet_Struct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartChet_Struct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		575873F96EF476E4405712D3 /* Pods-SmartChet-Struct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartChet-Struct.debug.xcconfig"; path = "Target Support Files/Pods-SmartChet-Struct/Pods-SmartChet-Struct.debug.xcconfig"; sourceTree = "<group>"; };
 		632A5A2029AD29CB00BC8226 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		632A5A2629AD312100BC8226 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		632A5A2B29AD32C000BC8226 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		635327CB29A95B8200A804EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		635327CD29A95B8200A804EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		635327D829A95EEE00A804EE /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		6379EDCD29AFDF1E00EA7347 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B71AA77346FC56D4D48DF858 /* Pods-SmartChet-Struct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartChet-Struct.release.xcconfig"; path = "Target Support Files/Pods-SmartChet-Struct/Pods-SmartChet-Struct.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4BA468C50AADC2F0C9F993F /* Pods_SmartChet_Struct.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +128,8 @@
 				632A5A5929AD894A00BC8226 /* Purple Smile.ttf */,
 				635327BE29A95B8000A804EE /* SmartChet-Struct */,
 				635327BD29A95B8000A804EE /* Products */,
+				FFC0B77BF76200767C001734 /* Pods */,
+				860D3CE50F11A340D45DB760 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +144,7 @@
 		635327BE29A95B8000A804EE /* SmartChet-Struct */ = {
 			isa = PBXGroup;
 			children = (
+				63B555B129AEE37600DAABFE /* MainScreen */,
 				635327D329A95BC900A804EE /* Login */,
 				632A5A2429AD2E1E00BC8226 /* RegisterAccount */,
 				632A5A5329AD7CF800BC8226 /* SucessCreatedAccount */,
@@ -143,6 +153,7 @@
 				635327C829A95B8200A804EE /* Assets.xcassets */,
 				635327CA29A95B8200A804EE /* LaunchScreen.storyboard */,
 				635327CD29A95B8200A804EE /* Info.plist */,
+				6379EDCD29AFDF1E00EA7347 /* GoogleService-Info.plist */,
 			);
 			path = "SmartChet-Struct";
 			sourceTree = "<group>";
@@ -173,6 +184,47 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		63B555B129AEE37600DAABFE /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				63B555B329AEE39500DAABFE /* VC */,
+				63B555B229AEE37F00DAABFE /* Screen */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		63B555B229AEE37F00DAABFE /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		63B555B329AEE39500DAABFE /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		860D3CE50F11A340D45DB760 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3599ACDFF6858319C8828A1E /* Pods_SmartChet_Struct.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFC0B77BF76200767C001734 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				575873F96EF476E4405712D3 /* Pods-SmartChet-Struct.debug.xcconfig */,
+				B71AA77346FC56D4D48DF858 /* Pods-SmartChet-Struct.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 635327D029A95B8200A804EE /* Build configuration list for PBXNativeTarget "SmartChet-Struct" */;
 			buildPhases = (
+				315E1C418B492ADCF512471E /* [CP] Check Pods Manifest.lock */,
 				635327B829A95B8000A804EE /* Sources */,
 				635327B929A95B8000A804EE /* Frameworks */,
 				635327BA29A95B8000A804EE /* Resources */,
+				2BAC65EB9A80D349CEF3E472 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,12 +286,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				635327CC29A95B8200A804EE /* LaunchScreen.storyboard in Resources */,
+				6379EDCE29AFDF1E00EA7347 /* GoogleService-Info.plist in Resources */,
 				632A5A5B29AD929700BC8226 /* Purple Smile.ttf in Resources */,
 				635327C929A95B8200A804EE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BAC65EB9A80D349CEF3E472 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartChet-Struct/Pods-SmartChet-Struct-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartChet-Struct/Pods-SmartChet-Struct-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartChet-Struct/Pods-SmartChet-Struct-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		315E1C418B492ADCF512471E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartChet-Struct-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		635327B829A95B8000A804EE /* Sources */ = {
@@ -386,17 +483,22 @@
 		};
 		635327D129A95B8200A804EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 575873F96EF476E4405712D3 /* Pods-SmartChet-Struct.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4G729SMP5Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SmartChet-Struct/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -412,17 +514,22 @@
 		};
 		635327D229A95B8200A804EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B71AA77346FC56D4D48DF858 /* Pods-SmartChet-Struct.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4G729SMP5Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SmartChet-Struct/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

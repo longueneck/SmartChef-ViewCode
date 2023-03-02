@@ -1,9 +1,3 @@
-//
-//  LoginScreen.swift
-//  SmartChet-Struct
-//
-//  Created by Kevin Longue on 24/02/23.
-//
 
 import UIKit
 
@@ -78,6 +72,7 @@ class LoginScreen: UIView {
         login.layer.shadowRadius = 2
         login.keyboardType = .emailAddress
         login.autocapitalizationType = .none
+        login.textColor = UIColor(red: 69/255, green: 48/255, blue: 20/255, alpha: 1)
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: login.frame.height))
             login.leftView = paddingView
             login.leftViewMode = .always
@@ -109,9 +104,11 @@ class LoginScreen: UIView {
         pass.layer.shadowOffset = CGSize(width: 0, height: 2)
         pass.layer.shadowRadius = 2
         pass.isSecureTextEntry = true
+        pass.textColor = UIColor(red: 69/255, green: 48/255, blue: 20/255, alpha: 1)
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: pass.frame.height))
             pass.leftView = paddingView
             pass.leftViewMode = .always
+        
             return pass
         }()
     
@@ -371,10 +368,6 @@ class LoginScreen: UIView {
          buttonSignIn.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 25),
          buttonSignIn.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -25),
          buttonSignIn.heightAnchor.constraint(equalToConstant: 45),
-
-       
          ])
      }
-    
- 
 }

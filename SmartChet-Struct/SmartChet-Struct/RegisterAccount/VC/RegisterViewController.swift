@@ -1,9 +1,12 @@
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
     
     var registerScreen: Register?
+    
+    var auth:Auth?
     
     override func loadView() {
         self.registerScreen = Register()
@@ -17,6 +20,7 @@ class RegisterViewController: UIViewController {
         hideKeyboardWhenTappedAround()
         self.registerScreen?.delegate(delegate: self)
         self.registerScreen?.configTextFields(delegate: self)
+        self.auth = Auth.auth()
     }
     
 }
@@ -32,7 +36,19 @@ extension RegisterViewController: RegisterProtocol{
     }
     
     func tapButton(){
-        navigationController?.pushViewController(SucessRegisteredViewController(), animated: true)
+        
+        let user: String = self.registerScreen?.userTextField.text ?? ""
+        let email: String = self.registerScreen?.emailTextField.text ?? ""
+        let senha: String = self.registerScreen?.passwordTextField.text ?? ""
+        
+        
+        self.auth?.createUser(withEmail: email, password: senha, completion: { (result, error) in
+            if error != nil{
+                print("Erro ao cadastrar")
+            }else{
+                self.navigationController?.pushViewController(SucessRegisteredViewController(), animated: true)
+            }
+        })
     }
 }
 

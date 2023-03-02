@@ -7,17 +7,20 @@
 
 import UIKit
 
+
 protocol RegisterProtocol: AnyObject{
     
     func actionCreateButton()
 }
+
+
 
 class Register: UIView {
  
     private weak var delegate:RegisterViewController?
     
     func delegate(delegate: RegisterProtocol?){
-        self.delegate = delegate as! RegisterViewController
+        self.delegate = delegate as? RegisterViewController
     }
     
     let mainView: UIView = {
@@ -85,6 +88,7 @@ class Register: UIView {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: userTf.frame.height))
         userTf.leftView = paddingView
         userTf.leftViewMode = .always
+        userTf.textColor = UIColor(red: 69/255, green: 48/255, blue: 20/255, alpha: 1)
         
         return userTf
     }()
@@ -112,6 +116,8 @@ class Register: UIView {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: tfEmail.frame.height))
         tfEmail.leftView = paddingView
         tfEmail.leftViewMode = .always
+        tfEmail.textColor = UIColor(red: 69/255, green: 48/255, blue: 20/255, alpha: 1)
+        tfEmail.autocapitalizationType = .sentences
         
         return tfEmail
     }()
@@ -139,6 +145,7 @@ class Register: UIView {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: tfpass.frame.height))
             tfpass.leftView = paddingView
             tfpass.leftViewMode = .always
+        tfpass.textColor = UIColor(red: 69/255, green: 48/255, blue: 20/255, alpha: 1)
         return tfpass
     }()
     
@@ -155,7 +162,7 @@ class Register: UIView {
         entrar.layer.shadowOffset = CGSize(width: 0, height: 2)
         entrar.layer.shadowRadius = 2
         entrar.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        entrar.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
+        entrar.addTarget(Register.self, action: #selector(tapButton), for: .touchUpInside)
         
         return entrar
     }()
@@ -267,7 +274,7 @@ class Register: UIView {
                     buttonCreate.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor,constant: 50),
                     buttonCreate.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 30),
                     buttonCreate.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -30),
-                    buttonCreate.heightAnchor.constraint(equalToConstant: 40)
+                    buttonCreate.heightAnchor.constraint(equalToConstant: 45)
                 ])
             }
             

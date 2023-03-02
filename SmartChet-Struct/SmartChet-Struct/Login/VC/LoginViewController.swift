@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
         self.loginScreen?.delegate(delegate: self)
         self.loginScreen?.configTextFields(delegate: self)
     }
-
+            
 }
 
 extension LoginViewController: LoginScreenProtocol{
