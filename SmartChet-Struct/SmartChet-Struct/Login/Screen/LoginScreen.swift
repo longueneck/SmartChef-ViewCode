@@ -136,6 +136,8 @@ class LoginScreen: UIView {
         button.layer.shadowRadius = 2
         button.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
+        
             return button
         }()
 

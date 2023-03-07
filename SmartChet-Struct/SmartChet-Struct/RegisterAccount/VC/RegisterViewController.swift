@@ -37,7 +37,7 @@ extension RegisterViewController: RegisterProtocol{
     
     func tapButton(){
         
-        let user: String = self.registerScreen?.userTextField.text ?? ""
+        let _: String = self.registerScreen?.userTextField.text ?? ""
         let email: String = self.registerScreen?.emailTextField.text ?? ""
         let senha: String = self.registerScreen?.passwordTextField.text ?? ""
         

@@ -19,7 +19,10 @@
 		635327C929A95B8200A804EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635327C829A95B8200A804EE /* Assets.xcassets */; };
 		635327CC29A95B8200A804EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635327CA29A95B8200A804EE /* LaunchScreen.storyboard */; };
 		635327D929A95EEE00A804EE /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635327D829A95EEE00A804EE /* LoginScreen.swift */; };
+		635FFE9B29B65B0100AEB58D /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FFE9A29B65B0100AEB58D /* Main.swift */; };
+		635FFE9F29B66D1E00AEB58D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FFE9E29B66D1E00AEB58D /* MainViewController.swift */; };
 		6379EDCE29AFDF1E00EA7347 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6379EDCD29AFDF1E00EA7347 /* GoogleService-Info.plist */; };
+		63FA374529B638F800995A0C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA374429B638F800995A0C /* Alert.swift */; };
 		B4BA468C50AADC2F0C9F993F /* Pods_SmartChet_Struct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3599ACDFF6858319C8828A1E /* Pods_SmartChet_Struct.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +43,10 @@
 		635327CB29A95B8200A804EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		635327CD29A95B8200A804EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		635327D829A95EEE00A804EE /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		635FFE9A29B65B0100AEB58D /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		635FFE9E29B66D1E00AEB58D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6379EDCD29AFDF1E00EA7347 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		63FA374429B638F800995A0C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B71AA77346FC56D4D48DF858 /* Pods-SmartChet-Struct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartChet-Struct.release.xcconfig"; path = "Target Support Files/Pods-SmartChet-Struct/Pods-SmartChet-Struct.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +150,7 @@
 		635327BE29A95B8000A804EE /* SmartChet-Struct */ = {
 			isa = PBXGroup;
 			children = (
+				63FA374329B638DF00995A0C /* Alert */,
 				63B555B129AEE37600DAABFE /* MainScreen */,
 				635327D329A95BC900A804EE /* Login */,
 				632A5A2429AD2E1E00BC8226 /* RegisterAccount */,
@@ -196,6 +203,7 @@
 		63B555B229AEE37F00DAABFE /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				635FFE9A29B65B0100AEB58D /* Main.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -203,8 +211,17 @@
 		63B555B329AEE39500DAABFE /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				635FFE9E29B66D1E00AEB58D /* MainViewController.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		63FA374329B638DF00995A0C /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				63FA374429B638F800995A0C /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		860D3CE50F11A340D45DB760 /* Frameworks */ = {
@@ -221,7 +238,6 @@
 				575873F96EF476E4405712D3 /* Pods-SmartChet-Struct.debug.xcconfig */,
 				B71AA77346FC56D4D48DF858 /* Pods-SmartChet-Struct.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -343,12 +359,15 @@
 			files = (
 				632A5A2129AD29CB00BC8226 /* UIViewController+Extension.swift in Sources */,
 				635327C429A95B8000A804EE /* LoginViewController.swift in Sources */,
+				635FFE9B29B65B0100AEB58D /* Main.swift in Sources */,
+				635FFE9F29B66D1E00AEB58D /* MainViewController.swift in Sources */,
 				632A5A2E29AD508700BC8226 /* SucessRegisteredViewController.swift in Sources */,
 				632A5A2C29AD32C000BC8226 /* RegisterViewController.swift in Sources */,
 				635327C029A95B8000A804EE /* AppDelegate.swift in Sources */,
 				632A5A2729AD312100BC8226 /* Register.swift in Sources */,
 				635327C229A95B8000A804EE /* SceneDelegate.swift in Sources */,
 				632A5A3029AD50EB00BC8226 /* SucessRegisteredAccount.swift in Sources */,
+				63FA374529B638F800995A0C /* Alert.swift in Sources */,
 				635327D929A95EEE00A804EE /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
