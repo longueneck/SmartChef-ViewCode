@@ -68,6 +68,61 @@ class Main: UIView {
         return add
     }()
     
+    lazy var tableView: UITableView = {
+       let table = UITableView()
+        table.translatesAutoresizingMaskIntoConstraints = false
+        table.backgroundColor = .white
+        table.layer.cornerRadius = 12
+        table.layer.shadowColor = UIColor.black.cgColor
+        table.layer.shadowOpacity = 0.1
+        table.layer.shadowOffset = CGSize(width: 0, height: 2)
+        table.layer.shadowRadius = 2
+        table.register(IngredientsTableViewCell.self, forCellReuseIdentifier: IngredientsTableViewCell.identifier)
+        return table
+    }()
+    
+    lazy var underView: UIView = {
+        let underV = UIView()
+        underV.translatesAutoresizingMaskIntoConstraints = false
+        underV.backgroundColor = .white
+        
+        return underV
+    }()
+    
+//
+    
+    lazy var bachgroundWhite: UIView = {
+        let white = UIView()
+        white.translatesAutoresizingMaskIntoConstraints = false
+        white.backgroundColor = .white
+        
+        
+        return white
+    }()
+    
+    lazy var imageBalls: UIImageView = {
+        let balls = UIImageView()
+        balls.translatesAutoresizingMaskIntoConstraints = false
+        balls.image = UIImage(named: "bolas")
+        balls.contentMode = .scaleAspectFit
+        
+        return balls
+    }()
+    
+    lazy var buttonSearch:UIButton = {
+        let search = UIButton()
+        search.translatesAutoresizingMaskIntoConstraints = false
+        search.layer.borderWidth = 4
+        search.layer.borderColor = UIColor(red: 255/255, green: 177/255, blue: 0/255, alpha: 1).cgColor
+        search.layer.cornerRadius = 10
+        search.setTitle("Encontrar Receitas", for: .normal)
+//        search.font = UIFont.systemFont(ofSize: 18)
+        
+       return search
+    }()
+    
+    
+    
     
     
     override init(frame: CGRect) {
@@ -82,6 +137,12 @@ class Main: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func addTableViewDelegate(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
+        
+    }
+    
     func setElements(){
         
         self.addSubview(self.viewBG)
@@ -89,6 +150,11 @@ class Main: UIView {
         self.addSubview(self.label1)
         self.addSubview(self.label2)
         self.addSubview(self.addIngredients)
+        self.addSubview(self.bachgroundWhite)
+        self.addSubview(self.tableView)
+        self.addSubview(self.underView)
+        self.addSubview(self.imageBalls)
+        self.addSubview(self.buttonSearch)
         
     }
     
@@ -97,7 +163,7 @@ class Main: UIView {
             
             viewBG.heightAnchor.constraint(equalToConstant: 90),
             viewBG.widthAnchor.constraint(equalToConstant: 90),
-            viewBG.topAnchor.constraint(equalTo: self.topAnchor, constant: 120),
+            viewBG.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 100),
             viewBG.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             
             userPhoto.heightAnchor.constraint(equalToConstant: 80),
@@ -116,6 +182,25 @@ class Main: UIView {
             addIngredients.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
             addIngredients.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
             addIngredients.topAnchor.constraint(equalTo: label2.bottomAnchor, constant: 10),
+          
+            tableView.topAnchor.constraint(equalTo: addIngredients.bottomAnchor, constant: 30),
+            tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+            tableView.heightAnchor.constraint(equalToConstant: 256),
+            
+            underView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0),
+            underView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            underView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
+            underView.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 60),
+            
+            imageBalls.centerYAnchor.constraint(equalTo: underView.topAnchor, constant: 0),
+            imageBalls.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            imageBalls.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            
+            buttonSearch.topAnchor.constraint(equalTo: imageBalls.bottomAnchor, constant: 30),
+            buttonSearch.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 25),
+            buttonSearch.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+            buttonSearch.heightAnchor.constraint(equalToConstant: 45),
             
         ])
         

@@ -23,12 +23,7 @@ class Register: UIView {
         self.delegate = delegate as? RegisterViewController
     }
     
-    let mainView: UIView = {
-        let main = UIView()
-        main.translatesAutoresizingMaskIntoConstraints = false
-        main.backgroundColor = .white
-        return main
-    }()
+  
         
     let labelWelcome: UILabel = {
         let welcome = UILabel()
@@ -70,7 +65,7 @@ class Register: UIView {
         textPresentation.translatesAutoresizingMaskIntoConstraints = false
         textPresentation.text = "Nome de usuário"
         textPresentation.textColor = UIColor(red: 69/255, green: 48/255, blue: 20/255, alpha: 1)
-        textPresentation.font = UIFont.systemFont(ofSize: 18)
+        textPresentation.font = UIFont.systemFont(ofSize: 17)
         return textPresentation
     }()
     
@@ -98,7 +93,7 @@ class Register: UIView {
         email.translatesAutoresizingMaskIntoConstraints = false
         email.text = "E-mail"
         email.textColor = UIColor(red: 69/255, green: 48/255, blue: 20/255, alpha: 1)
-        email.font = UIFont.systemFont(ofSize: 18)
+        email.font = UIFont.systemFont(ofSize: 17)
         return email
     }()
     
@@ -127,7 +122,7 @@ class Register: UIView {
         pass.translatesAutoresizingMaskIntoConstraints = false
         pass.text = "Senha"
         pass.textColor = UIColor(red: 69/255, green: 48/255, blue: 22/255, alpha: 1)
-        pass.font = UIFont.systemFont(ofSize: 18)
+        pass.font = UIFont.systemFont(ofSize: 17)
         return pass
     }()
     
@@ -180,7 +175,7 @@ class Register: UIView {
         }
         
         func configSuperViews(){
-            self.addSubview(self.mainView)
+           
             self.addSubview(self.labelWelcome)
             self.addSubview(self.labelTextPresentation)
             self.addSubview(self.logoChar)
@@ -229,52 +224,49 @@ class Register: UIView {
     
     func addConstraintsForElements(){
                 NSLayoutConstraint.activate([
-                    
-                    mainView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-                    mainView.bottomAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-                    mainView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-                    mainView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-                    
-                    labelWelcome.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
-                    labelWelcome.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
-                    
+
+                    labelWelcome.topAnchor.constraint(equalTo: self.topAnchor, constant: 70),
+                    labelWelcome.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+
                     labelTextPresentation.topAnchor.constraint(equalTo: labelWelcome.bottomAnchor, constant: 7),
-                    labelTextPresentation.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
-                    
-                    logoChar.topAnchor.constraint(equalTo: labelTextPresentation.bottomAnchor, constant: 50),
-                    logoChar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
-                    
+                    labelTextPresentation.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+
+                    logoChar.topAnchor.constraint(equalTo: labelTextPresentation.bottomAnchor, constant: 25),
+                    logoChar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+
                     logoName.centerYAnchor.constraint(equalTo: logoChar.centerYAnchor),
                     logoName.leadingAnchor.constraint(equalTo: logoChar.trailingAnchor, constant: 7),
-                    
+
                     labelUserName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
-                    labelUserName.topAnchor.constraint(equalTo: logoChar.bottomAnchor, constant: 35),
-                    
+                    labelUserName.topAnchor.constraint(equalTo: logoChar.bottomAnchor, constant: 25),
+
                     userTextField.topAnchor.constraint(equalTo: labelUserName.bottomAnchor, constant: 5),
                     userTextField.heightAnchor.constraint(equalToConstant: 45),
-                    userTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
-                    userTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30),
-                    
-                    labelEmail.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
-                    labelEmail.topAnchor.constraint(equalTo: userTextField.bottomAnchor, constant: 15),
-                    
+                    userTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+                    userTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+
+                    labelEmail.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+                    labelEmail.topAnchor.constraint(equalTo: userTextField.bottomAnchor, constant: 10),
+
                     emailTextField.topAnchor.constraint(equalTo: labelEmail.bottomAnchor, constant: 5),
                     emailTextField.heightAnchor.constraint(equalToConstant: 45),
-                    emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
-                    emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30),
-                    
+                    emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+                    emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+
                     labelPassword.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
                     labelPassword.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 15),
-                    
+
                     passwordTextField.topAnchor.constraint(equalTo: labelPassword.bottomAnchor, constant: 5),
                     passwordTextField.heightAnchor.constraint(equalToConstant: 45),
-                    passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
-                    passwordTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30),
+                    passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+                    passwordTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25),
+
+
+                    buttonCreate.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 25),
+                    buttonCreate.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -25),
+                    buttonCreate.heightAnchor.constraint(equalToConstant: 45),
+                    buttonCreate.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -20),
                     
-                    buttonCreate.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor,constant: 50),
-                    buttonCreate.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 30),
-                    buttonCreate.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -30),
-                    buttonCreate.heightAnchor.constraint(equalToConstant: 45)
                 ])
             }
             

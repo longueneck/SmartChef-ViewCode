@@ -14,13 +14,7 @@ class LoginScreen: UIView {
         self.delegate = delegate
     }
 
-    lazy var mainView: UIView = {
-        let main = UIView()
-        
-        main.translatesAutoresizingMaskIntoConstraints = false
-        main.backgroundColor = .white
-            return main
-        }()
+   
     
     lazy var bgYellow: UIView = {
         let background = UIView()
@@ -35,6 +29,8 @@ class LoginScreen: UIView {
         
         balls.image = UIImage(named: "bolas.png")
         balls.translatesAutoresizingMaskIntoConstraints = false
+        balls.contentMode = .scaleAspectFill
+       
             return balls
         }()
     
@@ -54,7 +50,8 @@ class LoginScreen: UIView {
         loginText.text = "Usuário"
         loginText.font = UIFont.boldSystemFont(ofSize: 17)
         loginText.textColor = UIColor(red: 69/255, green: 48/255, blue: 20/255, alpha: 1)
-            return loginText
+        
+        return loginText
         }()
     
     lazy var tfLogin: UITextField = {
@@ -231,7 +228,7 @@ class LoginScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-       
+        self.backgroundColor = .white
         self.configSuperViews()
         self.addConstraints()
         
@@ -242,11 +239,10 @@ class LoginScreen: UIView {
     }
     
     func configSuperViews(){
-        self.addSubview(self.mainView)
-        self.addSubview(self.mainView)
+       
         self.addSubview(self.bgYellow)
         self.addSubview(self.imageBall)
-        self.addSubview(  self.logoInitial)
+        self.addSubview(self.logoInitial)
         self.addSubview(self.labelLogin)
         self.addSubview(self.tfLogin)
         self.addSubview(self.labelPassword)
@@ -300,76 +296,80 @@ class LoginScreen: UIView {
      func addConstraints(){
          
          NSLayoutConstraint.activate([
-             
-         mainView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-         mainView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-         mainView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-         mainView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0),
 
          bgYellow.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
          bgYellow.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
          bgYellow.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-         bgYellow.heightAnchor.constraint(equalToConstant: 258),
+         bgYellow.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 130),
          
-         imageBall.centerYAnchor.constraint(equalTo: bgYellow.bottomAnchor, constant: 0),
-         
-         logoInitial.topAnchor.constraint(equalTo: bgYellow.topAnchor, constant: 80),
          logoInitial.heightAnchor.constraint(equalToConstant: 120),
          logoInitial.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
          logoInitial.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
-     
-         labelLogin.topAnchor.constraint(equalTo: bgYellow.bottomAnchor, constant: 50),
+         logoInitial.bottomAnchor.constraint(equalTo: bgYellow.bottomAnchor, constant: -30),
+
+         imageBall.centerYAnchor.constraint(equalTo: bgYellow.bottomAnchor, constant: 0),
+         imageBall.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
+         imageBall.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+
+         labelLogin.topAnchor.constraint(equalTo: imageBall.bottomAnchor,constant: 10),
          labelLogin.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 25),
-        
-         tfLogin.topAnchor.constraint(equalTo: labelLogin.bottomAnchor,constant: 10),
+         labelLogin.heightAnchor.constraint(equalToConstant: 20),
+
+         tfLogin.topAnchor.constraint(equalTo: labelLogin.bottomAnchor, constant: 6),
          tfLogin.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 25),
          tfLogin.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -25),
          tfLogin.heightAnchor.constraint(equalToConstant: 45),
-  
-         labelPassword.topAnchor.constraint(equalTo: tfLogin.bottomAnchor, constant: 20),
+
+         labelPassword.topAnchor.constraint(equalTo: tfLogin.bottomAnchor, constant: 10),
          labelPassword.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 25),
-       
-         tfPassword.topAnchor.constraint(equalTo: labelPassword.bottomAnchor,constant: 10),
+         labelPassword.heightAnchor.constraint(equalToConstant: 20),
+
+         tfPassword.topAnchor.constraint(equalTo: labelPassword.bottomAnchor,constant: 6),
          tfPassword.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 25),
          tfPassword.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -25),
          tfPassword.heightAnchor.constraint(equalToConstant: 45),
-         
+
          passReset.topAnchor.constraint(equalTo: tfPassword.bottomAnchor, constant: 7),
          passReset.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 32),
-         
-         button1.topAnchor.constraint(equalTo: passReset.bottomAnchor,constant: 20),
+         passReset.heightAnchor.constraint(equalToConstant: 20),
+
+         button1.topAnchor.constraint(equalTo: passReset.bottomAnchor,constant: 10),
          button1.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 25),
          button1.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -25),
          button1.heightAnchor.constraint(equalToConstant: 45),
-     
-         
-         txtConectse.topAnchor.constraint(equalTo: button1.bottomAnchor, constant: 16),
+
+         txtConectse.topAnchor.constraint(equalTo: button1.bottomAnchor, constant: 10),
          txtConectse.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-         
+         txtConectse.heightAnchor.constraint(equalToConstant: 20),
+
          viewSeparation.topAnchor.constraint(equalTo: txtConectse.bottomAnchor,constant: 7),
          viewSeparation.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 25),
          viewSeparation.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -25),
          viewSeparation.heightAnchor.constraint(equalToConstant: 10),
-         
+
          appleIcon.centerXAnchor.constraint(equalTo: viewSeparation.centerXAnchor),
-         appleIcon.topAnchor.constraint(equalTo: viewSeparation.bottomAnchor, constant: 16),
+         appleIcon.topAnchor.constraint(equalTo: viewSeparation.bottomAnchor, constant: 10),
          appleIcon.heightAnchor.constraint(equalToConstant: 64),
          appleIcon.widthAnchor.constraint(equalToConstant: 64),
-         
+         appleIcon.bottomAnchor.constraint(equalTo: buttonSignIn.topAnchor, constant: -10),
+
          btFaceIcon.leadingAnchor.constraint(equalTo: viewSeparation.leadingAnchor),
-         btFaceIcon.topAnchor.constraint(equalTo: viewSeparation.bottomAnchor, constant: 16),
+         btFaceIcon.topAnchor.constraint(equalTo: viewSeparation.bottomAnchor, constant: 10),
          btFaceIcon.heightAnchor.constraint(equalToConstant: 64),
          btFaceIcon.widthAnchor.constraint(equalToConstant: 64),
-      
+         btFaceIcon.bottomAnchor.constraint(equalTo: buttonSignIn.topAnchor, constant: -10),
+
          btGoogleIcon.trailingAnchor.constraint(equalTo: viewSeparation.trailingAnchor),
-         btGoogleIcon.topAnchor.constraint(equalTo: viewSeparation.bottomAnchor, constant: 16),
+         btGoogleIcon.topAnchor.constraint(equalTo: viewSeparation.bottomAnchor, constant: 10),
          btGoogleIcon.heightAnchor.constraint(equalToConstant: 64),
          btGoogleIcon.widthAnchor.constraint(equalToConstant: 64),
-                                    
+         btGoogleIcon.bottomAnchor.constraint(equalTo: buttonSignIn.topAnchor, constant: -10),
+
          buttonSignIn.topAnchor.constraint(equalTo: appleIcon.bottomAnchor,constant: 20),
          buttonSignIn.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 25),
          buttonSignIn.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -25),
          buttonSignIn.heightAnchor.constraint(equalToConstant: 45),
+         // buttonSignIn.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -20),
          ])
      }
 }

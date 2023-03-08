@@ -22,6 +22,7 @@
 		635FFE9B29B65B0100AEB58D /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FFE9A29B65B0100AEB58D /* Main.swift */; };
 		635FFE9F29B66D1E00AEB58D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FFE9E29B66D1E00AEB58D /* MainViewController.swift */; };
 		6379EDCE29AFDF1E00EA7347 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6379EDCD29AFDF1E00EA7347 /* GoogleService-Info.plist */; };
+		638543E929B7B52300905F6C /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638543E829B7B52300905F6C /* IngredientsTableViewCell.swift */; };
 		63FA374529B638F800995A0C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA374429B638F800995A0C /* Alert.swift */; };
 		B4BA468C50AADC2F0C9F993F /* Pods_SmartChet_Struct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3599ACDFF6858319C8828A1E /* Pods_SmartChet_Struct.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		635FFE9A29B65B0100AEB58D /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		635FFE9E29B66D1E00AEB58D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6379EDCD29AFDF1E00EA7347 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		638543E829B7B52300905F6C /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
 		63FA374429B638F800995A0C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B71AA77346FC56D4D48DF858 /* Pods-SmartChet-Struct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartChet-Struct.release.xcconfig"; path = "Target Support Files/Pods-SmartChet-Struct/Pods-SmartChet-Struct.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,9 +193,18 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		638543E729B7B4FD00905F6C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				638543E829B7B52300905F6C /* IngredientsTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		63B555B129AEE37600DAABFE /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				638543E729B7B4FD00905F6C /* Cell */,
 				63B555B329AEE39500DAABFE /* VC */,
 				63B555B229AEE37F00DAABFE /* Screen */,
 			);
@@ -364,6 +375,7 @@
 				632A5A2E29AD508700BC8226 /* SucessRegisteredViewController.swift in Sources */,
 				632A5A2C29AD32C000BC8226 /* RegisterViewController.swift in Sources */,
 				635327C029A95B8000A804EE /* AppDelegate.swift in Sources */,
+				638543E929B7B52300905F6C /* IngredientsTableViewCell.swift in Sources */,
 				632A5A2729AD312100BC8226 /* Register.swift in Sources */,
 				635327C229A95B8000A804EE /* SceneDelegate.swift in Sources */,
 				632A5A3029AD50EB00BC8226 /* SucessRegisteredAccount.swift in Sources */,
